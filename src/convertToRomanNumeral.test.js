@@ -1,8 +1,12 @@
 function romanNumeralConvertor(num) {
-    if(num === 2) {
-        return "II"
+
+    let output = '';
+    while(num > 0) {
+        output += 'I';
+        --num
     }
-    return "I"
+    return output;
+
 }
 
 describe('roman numeral convertor' , () => {
@@ -13,4 +17,9 @@ describe('roman numeral convertor' , () => {
     it('should return "II" when I call the convertor with 2', () => {
         expect(romanNumeralConvertor(2)).toBe('II');
     })
+
+    it('should return "III when I call the converter with 3', () => {
+        expect(romanNumeralConvertor(3)).toBe('III');
+    })
+
 });
