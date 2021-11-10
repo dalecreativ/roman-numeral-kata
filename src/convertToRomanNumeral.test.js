@@ -1,15 +1,21 @@
 function romanNumeralConvertor(num) {
-    if(num >= 4) {
-        if(num === 5) {
-            return 'V'
-        }
-        return 'IV';
-    }
-    
     let output = '';
+    let lookupIndex = 0;
+
+    const romanLookup = [
+        {arabic: 5, numeral: 'V'},
+        {arabic: 4, numeral: 'IV'},
+        {arabic: 1, numeral: 'I'}
+    ]
+
     while(num > 0) {
-        output += 'I';
-        --num
+        const subtract = romanLookup[lookupIndex].arabic;
+        if(subtract <= num) {
+            output += romanLookup[lookupIndex].numeral;
+            num = num - subtract
+        } else{
+            lookupIndex++
+        }
     }
     return output;
 
@@ -36,6 +42,8 @@ describe('roman numeral convertor' , () => {
         expect(romanNumeralConvertor(5)).toBe('V');
     })
 
-    
+    it('should return "VI" when I call the converter with 6', () => {
+        expect(romanNumeralConvertor(6)).toBe('VI');
+    })
 
 });
