@@ -1,0 +1,19 @@
+{
+  "name": "arabictoroman",
+  "version": "1.0.0",
+  "description": "convert arabic numbers to roman numerals",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [
+    "roman",
+    "numeral",
+    "converter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.3.1"
+  }
+}
