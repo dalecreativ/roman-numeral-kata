@@ -3,6 +3,10 @@ function romanNumeralConvertor(num) {
     let lookupIndex = 0;
 
     const romanLookup = [
+        {arabic: 1000, numeral: 'M'},
+        {arabic: 900, numeral: 'CM'},
+        {arabic: 500, numeral: 'D'},
+        {arabic: 400, numeral: 'CD'},
         {arabic: 100, numeral: 'C'},
         {arabic: 90, numeral: 'XC'},
         {arabic: 50, numeral: 'L'},
@@ -102,5 +106,33 @@ describe('roman numeral convertor' , () => {
 
     it('should return "C" when I call the converter with 100', () => {
         expect(romanNumeralConvertor(100)).toBe('C');
-    })
+    });
+
+    it('should return "CXLIII" when I call the converter with 143', () => {
+        expect(romanNumeralConvertor(143)).toBe('CXLIII');
+    });
+
+    it('should return "CL" when I call the converter with 150', () => {
+        expect(romanNumeralConvertor(150)).toBe('CL');
+    });
+
+    it('should return "CCCLXV" when I call the converter with 365', () => {
+        expect(romanNumeralConvertor(365)).toBe('CCCLXV');
+    });
+
+    it('should return "CD" when I call the converter with 400', () => {
+        expect(romanNumeralConvertor(400)).toBe('CD');
+    });
+
+    it('should return "D" when I call the converter with 500', () => {
+        expect(romanNumeralConvertor(500)).toBe('D');
+    });
+
+    it('should return "CM" when I call the converter with 900', () => {
+        expect(romanNumeralConvertor(900)).toBe('CM');
+    });
+
+    it('should return "M" when I call the converter with 1000', () => {
+        expect(romanNumeralConvertor(1000)).toBe('M');
+    });
 });
