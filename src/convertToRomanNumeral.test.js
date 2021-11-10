@@ -3,6 +3,7 @@ function romanNumeralConvertor(num) {
     let lookupIndex = 0;
 
     const romanLookup = [
+        {arabic: 9, numeral: 'IX'},
         {arabic: 5, numeral: 'V'},
         {arabic: 4, numeral: 'IV'},
         {arabic: 1, numeral: 'I'}
