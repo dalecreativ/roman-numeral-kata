@@ -1,5 +1,8 @@
 function romanNumeralConvertor(num) {
-    if(num === 4) {
+    if(num >= 4) {
+        if(num === 5) {
+            return 'V'
+        }
         return 'IV';
     }
     
@@ -28,4 +31,11 @@ describe('roman numeral convertor' , () => {
     it('should return "IV" when I call the converter with 4', () => {
         expect(romanNumeralConvertor(4)).toBe('IV');
     })
+
+    it('should return "V" when I call the converter with 5', () => {
+        expect(romanNumeralConvertor(5)).toBe('V');
+    })
+
+    
+
 });
