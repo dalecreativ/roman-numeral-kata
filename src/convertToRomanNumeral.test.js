@@ -3,6 +3,7 @@ function romanNumeralConvertor(num) {
     let lookupIndex = 0;
 
     const romanLookup = [
+        {arabic: 10, numeral: 'X'},
         {arabic: 9, numeral: 'IX'},
         {arabic: 5, numeral: 'V'},
         {arabic: 4, numeral: 'IV'},
@@ -45,6 +46,10 @@ describe('roman numeral convertor' , () => {
 
     it('should return "IX" when I call the converter with 9', () => {
         expect(romanNumeralConvertor(9)).toBe('IX');
+    })
+
+    it('should return "X" when I call the converter with 10', () => {
+        expect(romanNumeralConvertor(10)).toBe('X');
     })
 
 });
