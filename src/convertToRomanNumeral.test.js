@@ -3,6 +3,10 @@ function romanNumeralConvertor(num) {
     let lookupIndex = 0;
 
     const romanLookup = [
+        {arabic: 100, numeral: 'C'},
+        {arabic: 90, numeral: 'XC'},
+        {arabic: 50, numeral: 'L'},
+        {arabic: 40, numeral: 'XL'},
         {arabic: 10, numeral: 'X'},
         {arabic: 9, numeral: 'IX'},
         {arabic: 5, numeral: 'V'},
@@ -64,4 +68,39 @@ describe('roman numeral convertor' , () => {
         expect(romanNumeralConvertor(39)).toBe('XXXIX');
     })
 
+    it('should return "XL" when I call the converter with 40', () => {
+        expect(romanNumeralConvertor(40)).toBe('XL');
+    })
+
+    it('should return "XLIX" when I call the converter with 49', () => {
+        expect(romanNumeralConvertor(49)).toBe('XLIX');
+    })
+
+    it('should return "XLVII" when I call the converter with 47', () => {
+        expect(romanNumeralConvertor(47)).toBe('XLVII');
+    })
+
+    it('should return "L" when I call the converter with 50', () => {
+        expect(romanNumeralConvertor(50)).toBe('L');
+    })
+
+    it('should return "LX" when I call the converter with 60', () => {
+        expect(romanNumeralConvertor(60)).toBe('LX');
+    })
+
+    it('should return "LXXIV" when I call the converter with 74', () => {
+        expect(romanNumeralConvertor(74)).toBe('LXXIV');
+    })
+
+    it('should return "XC" when I call the converter with 90', () => {
+        expect(romanNumeralConvertor(90)).toBe('XC');
+    })
+
+    it('should return "XCIX" when I call the converter with 99', () => {
+        expect(romanNumeralConvertor(99)).toBe('XCIX');
+    })
+
+    it('should return "C" when I call the converter with 100', () => {
+        expect(romanNumeralConvertor(100)).toBe('C');
+    })
 });
