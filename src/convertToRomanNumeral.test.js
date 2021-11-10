@@ -42,8 +42,8 @@ describe('roman numeral convertor' , () => {
         expect(romanNumeralConvertor(5)).toBe('V');
     })
 
-    it('should return "VI" when I call the converter with 6', () => {
-        expect(romanNumeralConvertor(6)).toBe('VI');
+    it('should return "IX" when I call the converter with 9', () => {
+        expect(romanNumeralConvertor(9)).toBe('IX');
     })
 
 });
