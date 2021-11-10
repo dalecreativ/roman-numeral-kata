@@ -1,7 +1,14 @@
 function romanNumeralConvertor(num) {
+    if(typeof num !== "number") {
+        return "Error - input invalid. The input provided is not a Number"
+    }
+
+    if(num < 1 || num > 3999) {
+        return "Error - invalid range. The input provided should be between 0 and 3999"
+    }
+
     let output = '';
     let lookupIndex = 0;
-
     const romanLookup = [
         {arabic: 1000, numeral: 'M'},
         {arabic: 900, numeral: 'CM'},
@@ -52,7 +59,10 @@ const testCases = [
     [500,"D"],
     [900,"CM"],
     [1000,"M"],
-    [3999, "MMMCMXCIX"]
+    [3999, "MMMCMXCIX"],
+    ["A string", "Error - input invalid. The input provided is not a Number"],
+    [0, "Error - invalid range. The input provided should be between 0 and 3999"],
+    [4000, "Error - invalid range. The input provided should be between 0 and 3999"]
 ]
 
 
