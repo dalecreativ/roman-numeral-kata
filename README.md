@@ -1,6 +1,12 @@
 # Convert number to roman numeral
 A TDD Kata to create a function that converts a number to a roman numeral
 
+## Getting started
+First, clone repo.
+Run `npm install` to install relevant dependencies
+
+Run `npm test` to run the tests against the RomanNumberalGenerator
+
 ## Approach
 For this kata I took a TDD red, green approach.  Here we write tests first, these tests should fail to begin with and then we write our code to make the test pass.  We follow this approach and slowly build up test cases, finding any patterns that emerge as we write our code.  As patterns emerge we refactor our code to remove any repetition.
 
